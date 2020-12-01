@@ -7,7 +7,7 @@ import Home from '../home/home';
 
 const main = () => {
   return (
-    <div style={{ paddingRight: '30%', paddingLeft: '30%'  }}>
+    <div className={'main'}>
       <Router basename="/"  >
         <Header></Header>
         <Switch  >
