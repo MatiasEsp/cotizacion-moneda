@@ -42,14 +42,14 @@ function setQuotationDolar(state: QuotationReducerState, action: QuotationAction
 function setQuotationEuro(state: QuotationReducerState, action: QuotationAction): QuotationReducerState {
   return {
     ...state,
-    dolar: action.payload.quotation,
+    euro: action.payload.quotation,
     isGetLoading: false,
   };
 }
 function setQuotationReal(state: QuotationReducerState, action: QuotationAction): QuotationReducerState {
   return {
     ...state,
-    dolar: action.payload.quotation,
+    real: action.payload.quotation,
     isGetLoading: false,
   };
 }
