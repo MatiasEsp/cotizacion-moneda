@@ -1,42 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Quotation } from "../../model/quotation";
 import { QuotationService, TypeMoney } from "../../services/quotation.service";
 import CoinDetail from "./coinDetail";
 
 const Coin = (props: IProps) => {
-  const typeMoney: TypeMoney = props.typeMoney;
-  const [quotation, SetQuotation] = useState<Quotation>(undefined);
-
-  useEffect(() => {
-    let timeout: any;
-    if (!quotation) {
-      extractQuotation();
-    } else {
-      timeout = setTimeout(() => {
-        extractQuotation();
-      }, 5000);
-    }
-    return () => {
-      clearTimeout(timeout);
-    };
-  });
-
-  const extractQuotation = async () => {
-    try {
-      const quotation: Quotation = await QuotationService.getOneQuotationARS(
-        typeMoney
-      );
-      SetQuotation(quotation);
-    } catch (error) {
-      SetQuotation(undefined);
-    }
-  };
+  const quotation: Quotation = props.quotation;
 
   return (
     <div
       style={{
-        margin: 0,
-        padding: "40px",
       }}
     >
       <CoinDetail
@@ -55,5 +27,5 @@ const Coin = (props: IProps) => {
 export default Coin;
 
 interface IProps {
-  typeMoney: TypeMoney;
+  quotation: Quotation;
 }

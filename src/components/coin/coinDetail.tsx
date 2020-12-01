@@ -7,12 +7,31 @@ const CoinDetail = (props: IProps) => {
     <div
       id={"card"}
       style={{
-        backgroundColor: "#fff000",
+        padding: 10,
       }}
     >
-      {urlIcon && <img height={'20px'} src={urlIcon}></img>}
-      <div>{typeMoney ? typeMoney : "-"}</div>
-      <div>{price ? price : "-"}</div>
+      <div
+        id={"card"}
+        style={{
+          backgroundColor: "#82BB30",
+        }}
+      >
+        {urlIcon && <img height={"20px"} alt={typeMoney} src={urlIcon}></img>}
+        <div
+          style={{
+            padding: 10,
+          }}
+        >
+          {typeMoney ? typeMoney : "-"}
+        </div>
+        <div
+          style={{
+            padding: 10,
+          }}
+        >
+          {price ? price : "-"}
+        </div>
+      </div>
     </div>
   );
 };
