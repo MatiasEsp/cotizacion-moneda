@@ -8,8 +8,17 @@ const Coin = (props: IProps) => {
   const [quotation, SetQuotation] = useState<Quotation>(undefined);
 
   useEffect(() => {
-    extractQuotation();
-    return () => {};
+    let timeout: any;
+    if (!quotation) {
+      extractQuotation();
+    } else {
+      timeout = setTimeout(() => {
+        extractQuotation();
+      }, 5000);
+    }
+    return () => {
+      clearTimeout(timeout);
+    };
   });
 
   const extractQuotation = async () => {
@@ -33,7 +42,11 @@ const Coin = (props: IProps) => {
       <CoinDetail
         typeMoney={quotation ? quotation.moneda.toString() : undefined}
         price={quotation ? quotation.precio.toString() : undefined}
-        urlIcon={quotation ? QuotationService.getIconTypeMoney(quotation.moneda as TypeMoney) : undefined}
+        urlIcon={
+          quotation
+            ? QuotationService.getIconTypeMoney(quotation.moneda as TypeMoney)
+            : undefined
+        }
       />
     </div>
   );
