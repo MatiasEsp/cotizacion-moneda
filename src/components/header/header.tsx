@@ -8,10 +8,8 @@ import { localPath } from '../../constantes'
 const Header = () => {
   return (
     <Nav>
-      {/* <Nav.Item>
-        <NavLink to={localPath.ROOT} >home</NavLink>
-      </Nav.Item> */}
       <Nav.Item>
+        <NavLink to={localPath.ROOT} >home</NavLink>
       </Nav.Item>
     </Nav>
   )
