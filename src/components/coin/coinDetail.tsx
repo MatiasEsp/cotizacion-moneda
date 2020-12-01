@@ -4,16 +4,13 @@ const CoinDetail = (props: IProps) => {
   const { typeMoney, price, urlIcon, urlMapAmbit } = props;
 
   return (
-    <div
-      id={"card"}
-      style={{
-        padding: 10,
-      }}
-    >
       <div
-        id={"card"}
         style={{
-          backgroundColor: "#82BB30",
+          backgroundColor: "#D5F5E3",
+          marginTop: 30,
+          paddingTop: 30,
+          paddingBottom: 60,
+          borderRadius: 30,
         }}
       >
         {urlIcon && <img height={"20px"} alt={typeMoney} src={urlIcon}></img>}
@@ -22,18 +19,17 @@ const CoinDetail = (props: IProps) => {
             padding: 10,
           }}
         >
-          {typeMoney ? typeMoney : "-"}
+          {typeMoney ? typeMoney.toUpperCase() : "-"}
         </div>
         <div
           style={{
             padding: 10,
           }}
         >
-          {price ? price : "-"}
+          {urlIcon && <img height={"15px"} alt={typeMoney} src={urlIcon}></img>} {price ? price : "-"}
         </div>
         {urlMapAmbit && <img width={"90%"} alt={typeMoney} src={urlMapAmbit}></img>}
       </div>
-    </div>
   );
 };
 
