@@ -20,3 +20,5 @@ export class Quotation {
     return raws.map((raw: any) => Quotation.parseItem(raw));
   }
 }
+
+export default Quotation;
