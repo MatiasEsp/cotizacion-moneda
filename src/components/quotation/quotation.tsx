@@ -6,6 +6,9 @@ class Quotation extends Component<IProps, IState> {
   render() {
     return (
       <div className={'row'}>
+        <Coin typeMoney={valueTypeMoney.DOLAR} />
+        <Coin typeMoney={valueTypeMoney.EURO} />
+        <Coin typeMoney={valueTypeMoney.REAL} />
       </div>
     )
   }
