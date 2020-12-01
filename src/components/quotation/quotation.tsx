@@ -42,7 +42,7 @@ const Quotation = (props: IProps) => {
     <div className={"container"}>
       {isGetLoading && (
         <div
-          className={"fade modal show"}
+        className={"fade modal show"}
           style={{
             position: "fixed",
             top: "10%",
@@ -57,13 +57,13 @@ const Quotation = (props: IProps) => {
       )}
       <div className={"row"}>
         <div className={"col"}>
-          <Coin typeMoney={valueTypeMoney.DOLAR} />
+          <Coin quotation={quotationDolar} />
         </div>
         <div className={"col"}>
-          <Coin typeMoney={valueTypeMoney.EURO} />
+          <Coin quotation={quotationEuro} />
         </div>
         <div className={"col"}>
-          <Coin typeMoney={valueTypeMoney.REAL} />
+          <Coin quotation={quotationReal} />
         </div>
       </div>
     </div>

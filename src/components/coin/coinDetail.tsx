@@ -1,7 +1,7 @@
 import React from "react";
 
 const CoinDetail = (props: IProps) => {
-  const { typeMoney, price, urlIcon } = props;
+  const { typeMoney, price, urlIcon, urlMapAmbit } = props;
 
   return (
     <div
@@ -31,6 +31,7 @@ const CoinDetail = (props: IProps) => {
         >
           {price ? price : "-"}
         </div>
+        {urlMapAmbit && <img width={"90%"} alt={typeMoney} src={urlMapAmbit}></img>}
       </div>
     </div>
   );
@@ -42,4 +43,5 @@ interface IProps {
   typeMoney: string;
   price: string;
   urlIcon: string;
+  urlMapAmbit: string;
 }

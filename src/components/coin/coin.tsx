@@ -19,6 +19,11 @@ const Coin = (props: IProps) => {
             ? QuotationService.getIconTypeMoney(quotation.moneda as TypeMoney)
             : undefined
         }
+        urlMapAmbit={
+          quotation
+            ? QuotationService.getMapAmbitTypeMoney(quotation.moneda as TypeMoney)
+            : undefined
+        }
       />
     </div>
   );
