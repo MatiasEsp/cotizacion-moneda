@@ -1,18 +1,7 @@
-import React from 'react'
-import { Nav } from 'react-bootstrap'
-import {
-  NavLink
-} from 'react-router-dom'
-import { localPath } from '../../constantes'
+import React from "react";
 
 const Header = () => {
-  return (
-    <Nav>
-      <Nav.Item>
-        <NavLink to={localPath.ROOT} >home</NavLink>
-      </Nav.Item>
-    </Nav>
-  )
-}
+  return <div style={{ marginBottom: 30 }}></div>;
+};
 
-export default Header
+export default Header;

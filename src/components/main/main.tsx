@@ -7,7 +7,7 @@ import Home from '../home/home';
 
 const main = () => {
   return (
-    <div className={'main'}>
+    <div className={'container'}>
       <Router basename="/"  >
         <Header></Header>
         <Switch  >
