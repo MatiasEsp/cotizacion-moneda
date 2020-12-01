@@ -21,7 +21,12 @@ const getIconTypeMoney = (typeMoney: TypeMoney): string => {
   return `/img/money-${typeMoney}.png`;
 }
 
+const getMapAmbitTypeMoney = (typeMoney: TypeMoney): string => {
+  return `/img/map-ambit-${typeMoney}.png`;
+}
+
 export const QuotationService = {
   getOneQuotationARS,
   getIconTypeMoney,
+  getMapAmbitTypeMoney,
 }
